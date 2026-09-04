@@ -1,0 +1,318 @@
+2026-09-04 10:40:34 [ERROR] main.py(行:42: API URL 為空!)
+2026-09-04 10:41:10 [ERROR] main.py(行:42: API URL 為空!)
+2026-09-04 10:42:44 [ERROR] main.py(行:42: API URL 為空!)
+2026-09-04 10:46:31 [ERROR] main.py(行:42: API URL 為空!)
+2026-09-04 10:47:10 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:47:11 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:47:39 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:47:39 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:47:39 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:47:40 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:47:40 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:47:42 [ERROR] main.py(行:153: MySQL操作錯誤:(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CREARE DATABASE IF NOT EXISTS tainan CHARCTER SET utf8mb4 COLLATE utf8mb4_uni...' at line 1"))
+Traceback (most recent call last):
+  File "d:\Python\projects\tainan_house\main.py", line 99, in save_to_mysql
+    cursor.execute(f"CREARE DATABASE IF NOT EXISTS {DB_NAME} CHARCTER SET {DB_CHARSET} COLLATE utf8mb4_unicode_ci;")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CREARE DATABASE IF NOT EXISTS tainan CHARCTER SET utf8mb4 COLLATE utf8mb4_uni...' at line 1")
+2026-09-04 10:49:16 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:49:16 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:49:16 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:49:16 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:49:16 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:49:18 [ERROR] main.py(行:153: MySQL操作錯誤:(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1"))
+Traceback (most recent call last):
+  File "d:\Python\projects\tainan_house\main.py", line 99, in save_to_mysql
+    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME} CHARCTER SET {DB_CHARSET} COLLATE utf8mb4_unicode_ci;")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1")
+2026-09-04 10:53:04 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:53:04 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:53:04 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:53:04 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:53:04 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:53:06 [ERROR] main.py(行:153: MySQL操作錯誤:(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1"))
+Traceback (most recent call last):
+  File "d:\Python\projects\tainan_house\main.py", line 99, in save_to_mysql
+    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME} CHARCTER SET {DB_CHARSET} COLLATE utf8mb4_unicode_ci;")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1")
+2026-09-04 10:53:16 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:53:17 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:53:17 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:53:17 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:53:17 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:53:19 [ERROR] main.py(行:153: MySQL操作錯誤:(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1"))
+Traceback (most recent call last):
+  File "d:\Python\projects\tainan_house\main.py", line 99, in save_to_mysql
+    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME} CHARCTER SET {DB_CHARSET} COLLATE utf8mb4_unicode_ci;")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CHARCTER SET utf8mb4 COLLATE utf8mb4_unicode_ci' at line 1")
+2026-09-04 10:54:36 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:54:36 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:54:36 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:54:36 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:54:36 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:54:41 [ERROR] main.py(行:153: MySQL操作錯誤:(pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=utf8mb4 COLLATE=utf8mb4_unicode_ci' at line 15")
+[SQL: 
+                CREATE TABLE IF NOT EXISTS house(
+                    seq BIGINT,
+                    鄉鎮市區別 TEXT,
+                    區段數合計 TEXT,
+                    一般區段數 TEXT,
+                    繁榮街道路線價區段數 TEXT,
+                    一般路線價區段數 TEXT,
+                    一般區段價最高 TEXT,
+                    一般區段價最低 TEXT,
+                    最高繁榮街道路線價 TEXT,
+                    最低繁榮街道路線價 TEXT,
+                    最高一般路線價 TEXT,
+                    最低一般路線價 TEXT,
+                    最高宗地地價 TEXT
+                ) ENGINE = InnoDB DEFAULT=utf8mb4 COLLATE=utf8mb4_unicode_ci;    
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405))
+Traceback (most recent call last):
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=utf8mb4 COLLATE=utf8mb4_unicode_ci' at line 15")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Python\projects\tainan_house\main.py", line 114, in save_to_mysql
+    sql_conn.execute(text("""
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+        CREATE TABLE IF NOT EXISTS house(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        ) ENGINE = InnoDB DEFAULT=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """))
+    ^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 159, in execute
+    result = self._query(query)
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\cursors.py", line 330, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 582, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 847, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 1245, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\connections.py", line 803, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\Python\projects\tainan_house\.venv\Lib\site-packages\pymysql\err.py", line 154, in raise_mysql_exception
+    raise errorclass(errno, errval, sqlstate=sqlstate)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '=utf8mb4 COLLATE=utf8mb4_unicode_ci' at line 15")
+[SQL: 
+                CREATE TABLE IF NOT EXISTS house(
+                    seq BIGINT,
+                    鄉鎮市區別 TEXT,
+                    區段數合計 TEXT,
+                    一般區段數 TEXT,
+                    繁榮街道路線價區段數 TEXT,
+                    一般路線價區段數 TEXT,
+                    一般區段價最高 TEXT,
+                    一般區段價最低 TEXT,
+                    最高繁榮街道路線價 TEXT,
+                    最低繁榮街道路線價 TEXT,
+                    最高一般路線價 TEXT,
+                    最低一般路線價 TEXT,
+                    最高宗地地價 TEXT
+                ) ENGINE = InnoDB DEFAULT=utf8mb4 COLLATE=utf8mb4_unicode_ci;    
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-09-04 10:57:37 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:57:37 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:57:37 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:57:37 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:57:37 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:57:41 [INFO] main.py(行:134: MySQl 資料表已建立並清空舊資料)
+2026-09-04 10:57:41 [INFO] main.py(行:137: 正將資料寫入 MySQL table中...)
+2026-09-04 10:57:41 [INFO] main.py(行:146: 資料成功寫入MySQL!)
+2026-09-04 10:58:13 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 10:58:13 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 10:58:13 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 10:58:13 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 10:58:13 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 10:58:17 [INFO] main.py(行:134: MySQl 資料表已建立並清空舊資料)
+2026-09-04 10:58:17 [INFO] main.py(行:137: 正將資料寫入 MySQL table中...)
+2026-09-04 10:58:17 [INFO] main.py(行:146: 資料成功寫入MySQL!)
+2026-09-04 11:11:55 [INFO] main.py(行:46: 正在從API get data...)
+2026-09-04 11:11:56 [INFO] main.py(行:54: 成功取得資料, 共38筆)
+2026-09-04 11:11:56 [INFO] main.py(行:189: 準備處理38筆記錄)
+2026-09-04 11:11:56 [INFO] main.py(行:72: 資料寫入成功: excel tainan_house.xlsx)
+2026-09-04 11:11:56 [INFO] main.py(行:88: 連線至MySQL (localhost:3306) 檢查資料庫狀態...)
+2026-09-04 11:12:00 [INFO] main.py(行:134: MySQl 資料表已建立並清空舊資料)
+2026-09-04 11:12:00 [INFO] main.py(行:137: 正將資料寫入 MySQL table中...)
+2026-09-04 11:12:00 [INFO] main.py(行:146: 資料成功寫入MySQL!)
+2026-09-04 11:12:00 [INFO] main.py(行:196: 執行讀取資料...)
+2026-09-04 11:12:00 [INFO] main.py(行:163: 成功讀取excel, 共38 筆資料)
+2026-09-04 11:12:02 [INFO] main.py(行:174: 成功讀取MySQL, 共38 筆資料)
+2026-09-04 11:12:02 [INFO] main.py(行:212: 程式執行結束)
